@@ -21,15 +21,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/blog">Home</a>
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    {{post.title}}<br>
-    {{post.content}}
+    <div class="col-md-8 pt-5">
+        <div class="col-12"><h1>{{post.title}}</h1></div>
+        <div class="col-12">{{post.content}}</div>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

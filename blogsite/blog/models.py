@@ -16,6 +16,7 @@ class Post(models.Model):
     )
 
     title = models.CharField(max_length=250)
+    preview = models.TextField(null=True)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     publish = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
@@ -33,5 +34,3 @@ class Post(models.Model):
 
     def __str__(self) -> models.CharField:
         return self.title
-
-
