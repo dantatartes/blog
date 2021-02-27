@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Post
 
-# Create your views here.
+
+def home(request):
+    all_posts = Post.post_manager.all()
+    return render(request, "home.html", {'posts': all_posts})
